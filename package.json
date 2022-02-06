@@ -1,5 +1,4 @@
 {
-  "homepage": "https://vaidasmakstutis.github.io/react-demosite-app/",
   "name": "react-demosite-app",
   "version": "0.1.0",
   "private": true,
@@ -45,7 +44,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "gh-pages": "^3.2.3"
-  }
+  "devDependencies": {}
 }
