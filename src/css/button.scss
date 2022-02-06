@@ -1,0 +1,27 @@
+@import "variables.scss";
+
+// General style for button
+@mixin btn-rectangle {
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border-width: 3px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+// Style for blue button
+@mixin btn-blue {
+  color: $main-text-color;
+  background-color: $button-blue;
+  border-color: $main-text-color;
+}
+
+// Style for white button
+@mixin btn-white {
+  color: $header-bg-color;
+  background-color: $main-text-color;
+  border-color: $header-bg-color;
+}

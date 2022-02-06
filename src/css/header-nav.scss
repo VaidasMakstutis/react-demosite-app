@@ -1,0 +1,21 @@
+@import "variables.scss";
+
+.header-nav {
+  ul {
+    li {
+      display: inline-block;
+      list-style: none;
+      padding: 5px;
+      button {
+        color: $main-text-color;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 5px;
+      }
+    }
+  }
+}

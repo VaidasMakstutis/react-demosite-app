@@ -1,0 +1,140 @@
+@import "variables.scss";
+
+header {
+  background-color: $header-bg-color;
+  color: $main-text-color;
+  height: 160px;
+  padding-top: 10px;
+
+  .top-menu-list {
+    font-weight: 400;
+    font-size: 0.75rem;
+    width: 1030px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: flex-start;
+    text-transform: uppercase;
+  }
+
+  .bottom-menu-list {
+    width: 1030px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    img {
+      cursor: pointer;
+    }
+  }
+  .mobile-nav {
+    display: none;
+  }
+}
+
+// Mobile version
+
+@media only screen and (max-width: 653px) {
+  header {
+    width: 100%;
+    height: 100%;
+    .top-menu-list {
+      display: none;
+    }
+    .bottom-menu-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 20px;
+      width: auto;
+      .header-nav {
+        display: none;
+      }
+
+      // Hamburger icon
+      .mobile-nav {
+        display: block;
+        float: right;
+        margin-right: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        padding: 10px;
+        span {
+          display: block;
+          position: absolute;
+          pointer-events: none;
+          height: 6px;
+          width: 50%;
+          background: white;
+          border-radius: 9px;
+          opacity: 1;
+          left: 15px;
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+          -webkit-transition: 0.25s ease-in-out;
+          -moz-transition: 0.25s ease-in-out;
+          -o-transition: 0.25s ease-in-out;
+          transition: 0.25s ease-in-out;
+          &:nth-child(1) {
+            top: 16px;
+          }
+
+          &:nth-child(2),
+          &:nth-child(3) {
+            top: 28px;
+          }
+
+          &:nth-child(4) {
+            top: 40px;
+          }
+        }
+
+        &.open span {
+          &:nth-child(1) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+          }
+
+          &:nth-child(2) {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+
+          &:nth-child(3) {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+          }
+
+          &:nth-child(4) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+          }
+        }
+      }
+    }
+  }
+}

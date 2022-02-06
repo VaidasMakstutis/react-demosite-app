@@ -1,0 +1,27 @@
+@import "variables.scss";
+@import "button.scss";
+
+.page-container {
+  width: 1030px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  .page-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 35px;
+    .btn-back {
+      @include btn-rectangle;
+      @include btn-white;
+    }
+  }
+  .page-content {
+    p {
+      margin: 2rem 0;
+      text-align: justify;
+    }
+  }
+}

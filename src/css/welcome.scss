@@ -1,0 +1,83 @@
+@import "variables.scss";
+@import "button.scss";
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  margin-bottom: 50px;
+  .welcome-content {
+    width: 300px;
+    background-color: $header-bg-color;
+    padding: 20px;
+    margin-right: 35px;
+    h1 {
+      color: $main-text-color;
+      padding-top: 10px;
+    }
+    .welcome-content-box {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      p {
+        padding-top: 35px;
+        color: $main-text-color;
+      }
+      .button-pos {
+        display: flex;
+        justify-content: flex-end;
+        button {
+          @include btn-rectangle;
+          @include btn-blue;
+        }
+      }
+    }
+  }
+  .ux-ui-design {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    min-width: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    img {
+      width: 700px;
+    }
+    .ux-ui-design-content {
+      background-color: $bg-color-gray;
+      padding: 20px;
+      h2 {
+        padding-left: 20px;
+      }
+      p {
+        padding: 20px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 653px) {
+  .welcome {
+    display: block;
+    height: auto;
+    padding-bottom: 0.75rem;
+    .welcome-content {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 15px;
+      .button-pos {
+        padding-top: 70px;
+      }
+    }
+    .ux-ui-design {
+      width: auto;
+      height: auto;
+      margin-bottom: 15px;
+    }
+  }
+}
